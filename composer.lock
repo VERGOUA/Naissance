@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f8c94691366ed87c15a3f4e5f27255a7",
-    "content-hash": "1f88da3997b7b1e2a58daaf3c111741c",
+    "hash": "55dec0128a0d97a04ba06f088019a501",
+    "content-hash": "1cf48fe57dc02e1504a09893cb75605f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1836,6 +1836,53 @@
                 "templating"
             ],
             "time": "2016-01-25 21:22:18"
+        },
+        {
+            "name": "vergo/naissance-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VERGOUA/NaissanceBundle.git",
+                "reference": "26980b91439c1d3d3b433f3e61f2058482ed154b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VERGOUA/NaissanceBundle/zipball/26980b91439c1d3d3b433f3e61f2058482ed154b",
+                "reference": "26980b91439c1d3d3b433f3e61f2058482ed154b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "symfony/framework-bundle": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vergo\\NaissanceBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Golars",
+                    "email": "titorens@gmail.com"
+                }
+            ],
+            "keywords": [
+                "bundle"
+            ],
+            "time": "2016-04-30 17:40:21"
         }
     ],
     "packages-dev": [
@@ -1949,7 +1996,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vergo/naissance-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
