@@ -18,8 +18,10 @@ class SecurityControllerTest extends ApiAbstractControllerTest
 
         $user
             ->setUsername('admin')
+            ->setEmail('ReenExe@github.com')
             ->setPlainPassword('empty')
-            ->setRoles(['ROLE_ADMIN']);
+            ->setRoles(['ROLE_ADMIN'])
+            ->setUpdated(new \DateTime());
 
         $userManager->updateUser($user);
     }
