@@ -30,6 +30,33 @@ class SecurityControllerTest extends ApiAbstractControllerTest
 
     public function test()
     {
+        $this->client->request('POST', '/api/login');
 
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertResponse([
+            'success' => false
+        ]);
+
+        $this->client->request('POST', '/api/login', [
+            'username' => 'admin',
+            'password' => 'empty',
+        ]);
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertResponse([
+            'success' => true
+        ]);
+
+        $this->client->request('POST', '/api/logout');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertResponse([
+            'success' => true
+        ]);
+
+        $this->client->request('POST', '/api/logout');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertResponse([
+            'success' => false
+        ]);
     }
 }
