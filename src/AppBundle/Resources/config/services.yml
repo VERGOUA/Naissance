@@ -1,3 +1,8 @@
 services:
     fos_user.doctrine_registry:
         alias: doctrine
+
+    rqs.database.tester:
+        class: 'AppBundle\Service\DatabaseTesterService'
+        arguments:
+            - '@doctrine'

@@ -12,6 +12,8 @@ class SecurityControllerTest extends ApiAbstractControllerTest
 
         $container = static::$kernel->getContainer();
 
+        $container->get('rqs.database.tester')->clear();
+
         $userManager = $container->get('fos_user.user_manager');
         /* @var $user User */
         $user = $userManager->createUser();
