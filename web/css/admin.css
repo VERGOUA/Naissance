@@ -1,0 +1,198 @@
+/*.froala-box .froala-wrapper .f-placeholder{min-height: 300px;}*/
+.deletePhoto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(224, 0, 0, 0.5);
+    color: white;
+    top: 0px;
+    display: none;
+    text-align: center;
+    margin-right: 15px;
+    line-height: 50%;
+}
+.middle{
+    position: relative;
+    top: 50%;
+}
+#photos{
+    min-width: 100%;
+    display: table;
+}
+
+.elementPhoto{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+}
+.elementPhoto:hover .deletePhoto{
+    display: block;
+}
+
+.addCover{
+    position: relative;
+}
+.addCover,
+.addCover img{
+    width: 200px;
+    cursor: hand;
+}
+.addCoverPhoto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(1, 120, 24, 0.6);
+    color: white;
+    top: 0px;
+    display: none;
+    text-align: center;
+    margin-right: 15px;
+    line-height: 50%;
+    cursor: hand;
+}
+
+.deleteUser{
+    z-index: 15;
+    background-color: rgba(255, 0, 0, 0.51);
+    color: #FFF;
+    top: 0px;
+    display: none;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    padding-bottom: 20px;
+    cursor: hand;
+}
+
+.delete_question{
+    z-index: 15;
+    background-color: rgba(255, 0, 0, 0.51);
+    color: #FFF;
+    top: 3px;
+    display: none;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    right: 0px;
+    padding-bottom: 15px;
+}
+
+.addUserPhoto{
+    position: relative;
+}
+
+.addUserPhoto img{
+    width: 175px;
+    border-radius: 50%;
+}
+
+.addUserPhoto:hover .addCoverPhoto{
+    display: block;
+    border-radius: 50%;
+    width: 175px;
+}
+
+.addUserPhoto:hover .deleteUser{
+    display: block;
+}
+
+.addCover:hover .addCoverPhoto{
+    display: block;
+}
+
+.question_block:hover .delete_question{
+    display: block;
+}
+
+/*������������ */
+.addOrganizer{
+    position: relative;
+}
+
+.addOrganizer img{
+    width: 320px;
+}
+
+.addOrganizer:hover .addCoverPhoto{
+    display: block;
+    width: 320px;
+}
+
+.addOrganizer:hover .deleteOrganizer{
+    display: block;
+}
+
+.addOrganizer .deleteOrganizer{
+    z-index: 15;
+    background-color: rgba(255, 0, 0, 0.51);
+    color: #FFF;
+    top: 5px;
+    display: none;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 265px;
+    padding-bottom: 20px;
+    cursor: hand;
+}
+
+/**/
+.Organizer{
+    position: relative;
+}
+
+.Organizer img{
+    width: 320px;
+}
+
+.Organizer:hover .addCoverPhoto{
+    display: block;
+    width: 320px;
+}
+
+.b-popup{
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0px;
+    right: 0px;
+    z-index: 50;
+}
+.b-popup .b-popup-content{
+    margin: 10% auto 0px;
+    }
+
+body{
+    margin: 0 auto;
+    overflow-X: hidden;
+    position: relative;
+}
+
+.quest{
+    color: black;
+    resize: vertical;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    display: block;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.question{
+    margin-left: 0px;
+    border-radius: 5px;
+}
+.answer {
+    background-color: rgba(229, 228, 233, 0.1);
+    color: #363636;
+}

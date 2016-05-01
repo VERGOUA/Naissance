@@ -1,0 +1,33 @@
+{% extends 'AppBundle:Admin/layouts:simple.html.twig' %}
+
+{% block content %}
+    <div id="login" class="form">
+        <section class="login_content">
+            <form>
+                <img src="{{asset('images/logo.png')}}" width="200px">
+                <div>
+                    <input name="login" type="text" class="form-control" placeholder="E-Mail / Login" required="" />
+                </div>
+                <div>
+                    <input name="password" type="password" class="form-control" placeholder="Пароль" required="" />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success btn-lg submit">Войти</button>
+                </div>
+                <div class="clearfix"></div>
+                <div class="separator">
+
+                    <div class="clearfix"></div>
+                    <div>
+                        <h1><i class="fa fa-copyright" style="font-size: 26px;"></i> VERGO</h1>
+
+                        <p>© 2015-{{ 'now'|date('Y') }} All Rights Reserved. Privacy and Terms</p>
+                    </div>
+                </div>
+
+            </form>
+            <!-- form -->
+        </section>
+        <!-- content -->
+    </div>
+{% endblock %}

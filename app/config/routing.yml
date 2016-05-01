@@ -2,5 +2,8 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+vergo:
+    resource: "@AppBundle/Resources/config/routing.yml"
+
 naissance:
     resource: "@NaissanceBundle/Resources/config/routing.yml"

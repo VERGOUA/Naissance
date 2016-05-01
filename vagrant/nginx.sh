@@ -14,13 +14,13 @@ server {
 
     server_name naissance.loc;
     root        /var/www/vergo/web;
-    index       app.php;
+    index       app_dev.php;
 
     access_log  /var/log/nginx/access.log;
     error_log   /var/log/nginx/error.log;
 
     location / {
-        try_files $uri $uri/ /app.php?$args;
+        try_files $uri $uri/ /app_dev.php?$args;
     }
 
     location ~ \.php$ {
