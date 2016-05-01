@@ -1,0 +1,8 @@
+fos_user_security_login:
+    path: /login
+    defaults: { _controller: AppBundle:Api/Security:login }
+    methods: [POST]
+
+fos_user_security_logout:
+    path:  /logout
+    defaults: { _controller: AppBundle:Api/Security:logout }
