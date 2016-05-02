@@ -1,6 +1,6 @@
 vadmin:
     prefix: /vadmin
-    resource: '@AppBundle/Resources/config/routing_vadmin.yml'
+    resource: '@AppBundle/Resources/config/routing_admin.yml'
 
 vergo_api:
     prefix: /api
