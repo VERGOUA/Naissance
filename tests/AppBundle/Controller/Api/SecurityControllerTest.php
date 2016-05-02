@@ -19,9 +19,9 @@ class SecurityControllerTest extends ApiAbstractControllerTest
         $user = $userManager->createUser();
 
         $user
-            ->setUsername('admin')
-            ->setEmail('ReenExe@github.com')
-            ->setPlainPassword('empty')
+            ->setUsername($container->getParameter('admin_username'))
+            ->setEmail($container->getParameter('admin_email'))
+            ->setPlainPassword($container->getParameter('admin_password'))
             ->setRoles(['ROLE_ADMIN'])
             ->setUpdated(new \DateTime());
 
@@ -30,6 +30,8 @@ class SecurityControllerTest extends ApiAbstractControllerTest
 
     public function test()
     {
+        $container = static::$kernel->getContainer();
+
         $this->client->request('POST', '/api/login');
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
@@ -38,8 +40,8 @@ class SecurityControllerTest extends ApiAbstractControllerTest
         ]);
 
         $this->client->request('POST', '/api/login', [
-            'username' => 'admin',
-            'password' => 'empty',
+            'username' => $container->getParameter('admin_username'),
+            'password' => $container->getParameter('admin_password'),
         ]);
 
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());

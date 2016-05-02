@@ -17,3 +17,7 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    admin_username: Vergo
+    admin_email: admin@vergo.space
+    admin_password: 123
