@@ -1,0 +1,7 @@
+vadmin_index:
+    path:     /
+    defaults: { _controller: AppBundle:Admin:index }
+
+vadmin_login:
+    path:     /login
+    defaults: { _controller: AppBundle:Admin:login }

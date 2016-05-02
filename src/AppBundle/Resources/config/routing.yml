@@ -1,10 +1,6 @@
-index:
-    path:     /vadmin
-    defaults: { _controller: AppBundle:Admin:index }
-
-login:
-    path:     /login
-    defaults: { _controller: AppBundle:Admin:login }
+vadmin:
+    prefix: /vadmin
+    resource: '@AppBundle/Resources/config/routing_vadmin.yml'
 
 vergo_api:
     prefix: /api
