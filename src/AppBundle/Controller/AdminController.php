@@ -2,13 +2,15 @@
 
 namespace AppBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
+
 class AdminController extends Controller
 {
     public function indexAction()
     {
         $user = $this->getUser();
 
-        if (empty($uaer) || !$user->hasRole('ROLE_ADMIN')) {
+        if (empty($user) || !$user->hasRole('ROLE_ADMIN')) {
             return $this->redirect($this->generateUrl('admin_login'));
         }
 
@@ -24,9 +26,15 @@ class AdminController extends Controller
         ));
     }
 
-    public function loginCheckAction()
+    public function loginCheckAction(Request $request)
     {
+        if ($this->get('v.auth')->auth($request)) {
+            return $this->redirect($this->generateUrl('admin_index'));
+        }
 
+        return $this->render('AppBundle:Admin\base:login.html.twig', array(
+            // ...
+        ));
     }
 
 }
