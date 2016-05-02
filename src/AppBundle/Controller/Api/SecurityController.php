@@ -24,7 +24,7 @@ class SecurityController extends Controller
         /* @var $user User */
         $user = $this
             ->get('fos_user.user_manager')
-            ->findUserByUsername($username);
+            ->findUserByUsernameOrEmail($username);
 
         if (empty($user)) {
             return new JsonResponse([
