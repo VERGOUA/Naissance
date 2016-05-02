@@ -5,3 +5,9 @@ admin_index:
 admin_login:
     path:     /login
     defaults: { _controller: AppBundle:Admin:login }
+    methods: [GET]
+
+admin_login_check:
+    path:     /login
+    defaults: { _controller: AppBundle:Admin:loginCheck }
+    methods: [POST]
