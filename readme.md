@@ -1,6 +1,6 @@
 ## VERGO Naissance on Symfony PHP Framework
-!https://travis-ci.org/VERGOUA/NaissanceBundle.svg?branch=master!:https://travis-ci.org/VERGOUA/NaissanceBundle
-!https://scrutinizer-ci.com/g/VERGOUA/Naissance/badges/quality-score.png?b=master!:https://scrutinizer-ci.com/g/VERGOUA/Naissance/?branch=master
+[![Build Status](https://travis-ci.org/VERGOUA/Naissance.svg?branch=master)](https://travis-ci.org/VERGOUA/Naissance)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/VERGOUA/Naissance/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/VERGOUA/Naissance/?branch=master)
 
 ##### [Symfony] (http://symfony.com/)
 * [Install] (http://symfony.com/doc/current/book/installation.html)
