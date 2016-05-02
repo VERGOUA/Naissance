@@ -3,7 +3,7 @@ php: 5.6
 before_script:
     - composer install
     - mysql -e 'CREATE DATABASE `vergo_base`;'
-    - mysql -e 'USE mysql; UPDATE user SET password=PASSWORD('123') WHERE user='root'; FLUSH PRIVILEGES;'
+    - mysql -e "USE mysql; UPDATE user SET password=PASSWORD('123') WHERE user='root'; FLUSH PRIVILEGES;"
 
 env:
     - DB=mysql
