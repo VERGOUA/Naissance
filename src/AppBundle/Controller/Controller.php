@@ -12,6 +12,8 @@ class Controller extends FrameworkBundleController
      */
     public function getUser()
     {
+        return $this->get('doctrine')->getRepository('AppBundle:User')->find(1);
+
         return parent::getUser();
     }
 }
