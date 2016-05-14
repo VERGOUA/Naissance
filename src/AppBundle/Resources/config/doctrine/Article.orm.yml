@@ -14,7 +14,7 @@ AppBundle\Entity\Article:
 
     manyToOne:
         user:
-            targetEntity: AppBundle\Entity\SUser
+            targetEntity: AppBundle\Entity\User
             inversedBy: articles
             fetch: EXTRA_LAZY
             joinColumn:

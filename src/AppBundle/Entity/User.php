@@ -9,10 +9,17 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 class User extends BaseUser
 {
+
     /**
      * @var \DateTime
      */
     private $updated;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $articles;
+
 
     /**
      * Set updated
@@ -37,20 +44,15 @@ class User extends BaseUser
     {
         return $this->updated;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $articles;
-
 
     /**
      * Add article
      *
-     * @param \LB\AppBundle\Entity\Articles $article
+     * @param \AppBundle\Entity\Article $article
      *
      * @return User
      */
-    public function addArticle(\LB\AppBundle\Entity\Articles $article)
+    public function addArticle(\AppBundle\Entity\Article $article)
     {
         $this->articles[] = $article;
 
@@ -60,9 +62,9 @@ class User extends BaseUser
     /**
      * Remove article
      *
-     * @param \LB\AppBundle\Entity\Articles $article
+     * @param \AppBundle\Entity\Article $article
      */
-    public function removeArticle(\LB\AppBundle\Entity\Articles $article)
+    public function removeArticle(\AppBundle\Entity\Article $article)
     {
         $this->articles->removeElement($article);
     }

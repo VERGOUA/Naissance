@@ -43,7 +43,7 @@ class Article
     private $updated;
 
     /**
-     * @var \AppBundle\Entity\SUser
+     * @var \AppBundle\Entity\User
      */
     private $user;
 
@@ -205,11 +205,11 @@ class Article
     /**
      * Set user
      *
-     * @param \AppBundle\Entity\SUser $user
+     * @param \AppBundle\Entity\User $user
      *
      * @return Article
      */
-    public function setUser(\AppBundle\Entity\SUser $user = null)
+    public function setUser(\AppBundle\Entity\User $user = null)
     {
         $this->user = $user;
 
@@ -219,7 +219,7 @@ class Article
     /**
      * Get user
      *
-     * @return \AppBundle\Entity\SUser
+     * @return \AppBundle\Entity\User
      */
     public function getUser()
     {

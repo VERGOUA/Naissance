@@ -14,7 +14,7 @@ AppBundle\Entity\User:
 
     oneToMany:
         articles:
-            targetEntity: LB\AppBundle\Entity\Articles
+            targetEntity: AppBundle\Entity\Article
             mappedBy: user
             fetch: EXTRA_LAZY
 
