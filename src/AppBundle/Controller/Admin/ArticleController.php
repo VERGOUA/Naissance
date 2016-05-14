@@ -16,4 +16,9 @@ class ArticleController extends Controller
             ]
         );
     }
+
+    public function addAction()
+    {
+        return $this->render('AppBundle:Admin\article:edit.html.twig');
+    }
 }

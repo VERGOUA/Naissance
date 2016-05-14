@@ -16,3 +16,8 @@ admin_article_index:
     path: /articles
     defaults: { _controller: AppBundle:Admin\Article:index }
     methods: [GET]
+
+admin_article_add:
+    path: /article/add
+    defaults: { _controller: AppBundle:Admin\Article:add }
+    methods: [GET]
