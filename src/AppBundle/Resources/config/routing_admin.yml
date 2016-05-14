@@ -21,3 +21,8 @@ admin_article_add:
     path: /article/add
     defaults: { _controller: AppBundle:Admin\Article:add }
     methods: [GET]
+
+admin_article_save:
+    path: /article/save
+    defaults: { _controller: AppBundle:Admin\Article:save }
+    methods: [POST]
