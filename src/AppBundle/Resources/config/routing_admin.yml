@@ -1,13 +1,13 @@
 admin_index:
     path:     /
-    defaults: { _controller: AppBundle:Admin:index }
+    defaults: { _controller: AppBundle:Admin\Base:index }
 
 admin_login:
     path:     /login
-    defaults: { _controller: AppBundle:Admin:login }
+    defaults: { _controller: AppBundle:Admin\Base:login }
     methods: [GET]
 
 admin_login_check:
     path:     /login
-    defaults: { _controller: AppBundle:Admin:loginCheck }
+    defaults: { _controller: AppBundle:Admin\Base:loginCheck }
     methods: [POST]

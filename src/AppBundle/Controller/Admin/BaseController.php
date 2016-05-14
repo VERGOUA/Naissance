@@ -1,10 +1,11 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace AppBundle\Controller\Admin;
 
+use AppBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class AdminController extends Controller
+class BaseController extends Controller
 {
     public function indexAction()
     {
