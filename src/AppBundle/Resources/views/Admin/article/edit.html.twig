@@ -1,3 +1,7 @@
 {% extends 'AppBundle:Admin/layouts:base.html.twig' %}
 
-{% block content %}{% endblock %}
+{# @var form \Symfony\Component\Form\FormView #}
+
+{% block content %}
+    {{ form(form) }}
+{% endblock %}
