@@ -1,7 +1,5 @@
 {% extends 'AppBundle:Admin/layouts:index.html.twig' %}
 
-@extends('vergo_base::admin.layouts.all')
-
 {% block pageTitle %}
     Новости<small>управление публикациями</small>
 {% endblock %}
@@ -16,17 +14,17 @@
     <th width="10%">Галерея</th>
     <th>Статус</th>
 {% endblock %}
-{# @var model Article #}
+{# @var model \AppBundle\Entity\Article #}
 
 {% block tBody %}
 
     {% for model in collection %}
         <tr class="even pointer">
             <td class="a-center ">
-                <input name="{{model.id}}" type="checkbox" class="tableflat">
+                <input name="{{ model.id }}" type="checkbox" class="tableflat">
             </td>
             <td>
-                {{model.name}}
+                {{model.title}}
             </td>
             <td>{{model.info}}</td>
             <td>
@@ -39,12 +37,12 @@
                 </span>
             </td>
             <td>
-                {% if(isset(model.media.id)) %}
+                {% if model.media.id is defined %}
                     <div style="display: block; position: relative">
                         <img src="{{model.media.cover}}" width="50">
                         <div class="label label-default">{{model.media.name}}</div>
                     </div>
-                {% elseif %}
+                {% endif %}
             </td>
             <td>
                 <span class=" {{model.statusClass}}">
