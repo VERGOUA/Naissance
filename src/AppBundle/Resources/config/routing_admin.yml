@@ -11,3 +11,8 @@ admin_login_check:
     path:     /login
     defaults: { _controller: AppBundle:Admin\Base:loginCheck }
     methods: [POST]
+
+admin_article_index:
+    path: /articles
+    defaults: { _controller: AppBundle:Admin\Article:index }
+    methods: [GET]
