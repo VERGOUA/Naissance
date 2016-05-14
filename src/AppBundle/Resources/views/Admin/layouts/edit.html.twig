@@ -1,0 +1,36 @@
+{% extends 'AppBundle:Admin/layouts:base.html.twig' %}
+
+{{-- Content --}}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>
+                    {%  if(model.id) %} 'Редактирование' {% else %} 'Создание' {% endif %}
+                    @yield('title_name')
+                </h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                {{ form(form) }}
+                {!! Form::open(['url' => $getRoute(($model->id) ? 'edit' : 'add', ["id" => $model->id]), 'class' => 'popup form-horizontal form-label-left', 'enctype' => 'multipart/form-data']) !!}
+                @yield('form_body')
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-0">
+                        <a href="{{$getRoute()}}" class="btn btn-default">{{trans('vergo_base::main.btn_cancel')}}</a>
+                        @if($model->id)
+                        {!! Form::hidden('id', $model->id) !!}
+                        {!! Form::submit(trans('vergo_base::main.btn_update'), ['class'=>'btn btn-primary']) !!}
+                        @else
+                        {!! Form::submit(trans('vergo_base::main.btn_create'), ['class'=>'btn btn-primary']) !!}
+                        @endif
+                    </div>
+                </div>
+                {!! Form::close()!!}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
