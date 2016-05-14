@@ -12,6 +12,12 @@ AppBundle\Entity\User:
             generator:
                 strategy: IDENTITY
 
+    oneToMany:
+        articles:
+            targetEntity: LB\AppBundle\Entity\Articles
+            mappedBy: user
+            fetch: EXTRA_LAZY
+
     fields:
         updated:
             type: datetime
